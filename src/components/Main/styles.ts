@@ -1,8 +1,13 @@
-import styled from 'styled-components';
-import { ArrowLeft } from '../../styles/Icons';
+import styled, { css } from 'styled-components';
+import {
+  ArrowLeft,
+  Email,
+  Home,
+  Notifications,
+  Search,
+} from '../../styles/Icons';
 
 export const Container = styled.div`
-  z-index: 2;
   display: flex;
   flex-direction: column;
 
@@ -15,6 +20,7 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
+  z-index: 2;
   position: sticky;
   top: 0;
   background: var(--primary);
@@ -23,6 +29,7 @@ export const Header = styled.div`
   align-items: center;
 
   text-align: left;
+
   padding: 8px 0 9px 13px;
   border-bottom: 1px solid var(--outline);
 
@@ -38,14 +45,17 @@ export const Header = styled.div`
     }
   }
 `;
+
 export const BackIcon = styled(ArrowLeft)`
   width: 24px;
   height: 24px;
 
   fill: var(--twitter);
 `;
+
 export const ProfileInfo = styled.div`
   margin-left: 17px;
+  margin-right: 17px;
 
   display: flex;
   flex-direction: column;
@@ -58,4 +68,49 @@ export const ProfileInfo = styled.div`
     font-size: 15px;
     color: var(--gray);
   }
+`;
+
+export const BottomMenu = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+
+  background: var(--primary);
+  width: 100%;
+  border-top: 1px solid var(--outline);
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 8px min(46px, max(10vw, 10px));
+
+  @media (min-width: 500px) {
+    display: none;
+  }
+`;
+
+const iconsStyle = css`
+  width: 31px;
+  height: 31px;
+  cursor: pointer;
+  fill: var(--gray);
+
+  &:hover,
+  &.active {
+    fill: var(--twitter);
+  }
+`;
+
+export const SearchIcon = styled(Search)`
+  ${iconsStyle}
+`;
+export const HomeIcon = styled(Home)`
+  ${iconsStyle}
+`;
+export const BellIcon = styled(Notifications)`
+  ${iconsStyle}
+`;
+export const EmailIcon = styled(Email)`
+  ${iconsStyle}
 `;
