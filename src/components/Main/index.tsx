@@ -10,6 +10,7 @@ import {
   BellIcon,
   EmailIcon,
 } from './styles';
+import ProfilePage from '../ProfilePage';
 
 const Main: React.FC = () => {
   return (
@@ -25,7 +26,7 @@ const Main: React.FC = () => {
         </ProfileInfo>
       </Header>
 
-      {/* <ProfilePage /> */}
+      <ProfilePage />
       <BottomMenu>
         <HomeIcon className="active" />
         <SearchIcon />
