@@ -11,6 +11,7 @@ import {
   EmailIcon,
 } from './styles';
 import ProfilePage from '../ProfilePage';
+import Feed from '../Feed';
 
 const Main: React.FC = () => {
   return (
@@ -27,6 +28,7 @@ const Main: React.FC = () => {
       </Header>
 
       <ProfilePage />
+      <Feed />
       <BottomMenu>
         <HomeIcon className="active" />
         <SearchIcon />
