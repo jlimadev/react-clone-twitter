@@ -35,10 +35,6 @@ export const TopSide = styled.div`
 
   @media (min-width: 1280px) {
     align-items: flex-start;
-
-    > svg {
-      margin-left: 19px;
-    }
   }
 `;
 
@@ -61,10 +57,6 @@ export const MenuButton = styled.button`
     }
 
     padding-right: 15px;
-
-    > svg {
-      margin-left: 19px;
-    }
   }
 
   padding: 8.25px 0;
