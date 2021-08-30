@@ -23,10 +23,9 @@ export const Container = styled.div`
     left: 0;
 
     padding: 9px 19px 20px;
-
     max-height: 100vh;
     overflow-y: auto;
-  } ;
+  }
 `;
 
 export const TopSide = styled.div`
@@ -36,10 +35,14 @@ export const TopSide = styled.div`
 
   @media (min-width: 1280px) {
     align-items: flex-start;
+
+    > svg {
+      margin-left: 19px;
+    }
   }
 `;
 
-export const MenuButton = styled.div`
+export const MenuButton = styled.button`
   display: flex;
   align-items: center;
   flex-shrink: 0;
@@ -52,10 +55,16 @@ export const MenuButton = styled.div`
     > span {
       display: inline;
       margin-left: 19px;
+
       font-weight: bold;
       font-size: 19px;
     }
+
     padding-right: 15px;
+
+    > svg {
+      margin-left: 19px;
+    }
   }
 
   padding: 8.25px 0;
@@ -146,6 +155,7 @@ export const Logo = styled(Twitter)`
 
 export const ExitIcon = styled(ExitToApp)`
   display: none;
+
   @media (min-width: 1280px) {
     display: inline-block;
 
